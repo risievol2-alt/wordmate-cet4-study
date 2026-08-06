@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 type WordEntry = {
   word: string;
@@ -66,6 +66,7 @@ export default function Home() {
   const [reviewWords, setReviewWords] = useState<string[]>([]);
   const [mistakeWords, setMistakeWords] = useState<string[]>([]);
   const [attempts, setAttempts] = useState(0);
+  const nextTimerRef = useRef<number | null>(null);
   const [panelOpen, setPanelOpen] = useState<"review" | "mistakes" | null>(
     null,
   );
@@ -101,7 +102,7 @@ export default function Home() {
     [vocabulary],
   );
 
-  const chooseNext = useCallback(() => {
+  const chooseNext = useCallback((excludeWord?: string, strictExclude = false) => {
     if (!vocabulary.length) return;
     const list =
       mode === "review"
@@ -109,7 +110,11 @@ export default function Home() {
         : mode === "mistakes"
           ? mistakeWords.map((word) => wordMap.get(word)).filter(Boolean)
           : vocabulary;
-    const pool = list as WordEntry[];
+    const basePool = list as WordEntry[];
+    const filteredPool = excludeWord
+      ? basePool.filter((entry) => entry.word !== excludeWord)
+      : basePool;
+    const pool = filteredPool.length || strictExclude ? filteredPool : basePool;
     if (!pool.length) {
       setCurrent(null);
       setOptions([]);
@@ -134,7 +139,16 @@ export default function Home() {
 
   useEffect(() => {
     chooseNext();
-  }, [chooseNext]);
+  }, [mode, vocabulary.length]);
+
+  useEffect(
+    () => () => {
+      if (nextTimerRef.current !== null) {
+        window.clearTimeout(nextTimerRef.current);
+      }
+    },
+    [],
+  );
 
   const answer = useCallback(
     (option: WordEntry) => {
@@ -156,7 +170,13 @@ export default function Home() {
           words.includes(current.word) ? words : [current.word, ...words],
         );
       }
-      window.setTimeout(chooseNext, correct ? 650 : 1050);
+      if (nextTimerRef.current !== null) {
+        window.clearTimeout(nextTimerRef.current);
+      }
+      nextTimerRef.current = window.setTimeout(
+        () => chooseNext(current.word, mode === "mistakes" && correct),
+        correct ? 650 : 1050,
+      );
     },
     [chooseNext, current, mode, result],
   );
@@ -182,6 +202,10 @@ export default function Home() {
   };
 
   const switchMode = (nextMode: Mode) => {
+    if (nextTimerRef.current !== null) {
+      window.clearTimeout(nextTimerRef.current);
+      nextTimerRef.current = null;
+    }
     setMode(nextMode);
     setResult(null);
     setPanelOpen(null);
