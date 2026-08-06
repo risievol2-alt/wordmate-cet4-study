@@ -31,6 +31,20 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# local credentials and browser state
+cookies*.json
+cookies*.txt
+.cookies/
+*.har
+
+# local databases and generated scan reports
+*.db
+*.sqlite
+*.sqlite3
+scan-results/
+security-reports/
+*.sarif
+
 # vercel
 .vercel
 
