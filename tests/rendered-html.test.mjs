@@ -23,34 +23,47 @@ async function render() {
   );
 }
 
-test("server-renders the Wordmate application shell", async () => {
+test("server-renders the Office vocabulary application shell", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
   assert.match(html, /<html lang="zh-CN">/i);
-  assert.match(html, /<title>Wordmate · 四级词汇陪练<\/title>/i);
-  assert.match(html, /今天，再记住一个。/);
+  assert.match(html, /<title>Wordmate · Office 英文界面词汇陪练<\/title>/i);
+  assert.match(html, /把英文界面，练成熟悉操作。/);
   assert.match(html, /随机学习/);
   assert.match(html, /复习列表/);
   assert.match(html, /纠错练习/);
-  assert.match(html, /正在装载四级词库/);
+  assert.match(html, /正在装载 Office 界面词库/);
+  assert.match(html, /PowerPoint/);
 });
 
-test("ships the complete vocabulary and stable quiz controls", async () => {
+test("ships categorized Office vocabulary and stable quiz controls", async () => {
   const [page, vocabulary] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
-    readFile(new URL("../public/cet4.tsv", import.meta.url), "utf8"),
+    readFile(new URL("../public/office.tsv", import.meta.url), "utf8"),
   ]);
 
   const entries = vocabulary.split(/\r?\n/).filter(Boolean);
-  assert.equal(entries.length, 7508);
-  assert.ok(entries.every((entry) => entry.includes("\t")));
+  assert.equal(entries.length, 421);
+  const parsed = entries.map((entry) => entry.split("\t"));
+  assert.ok(parsed.every((entry) => entry.length === 3));
+  assert.deepEqual(
+    Object.fromEntries(
+      ["common", "word", "excel", "powerpoint"].map((category) => [
+        category,
+        parsed.filter((entry) => entry[2] === category).length,
+      ]),
+    ),
+    { common: 108, word: 96, excel: 112, powerpoint: 105 },
+  );
+  assert.equal(new Set(parsed.map((entry) => entry[0].toLowerCase())).size, 421);
 
   assert.match(page, /speechSynthesis/);
   assert.match(page, /localStorage/);
   assert.match(page, /nextTimerRef/);
   assert.match(page, /clearTimeout\(nextTimerRef\.current\)/);
   assert.match(page, /setTimeout/);
+  assert.match(page, /switchCategory/);
 });

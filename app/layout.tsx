@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Wordmate · 四级词汇陪练",
+  title: "Wordmate · Office 英文界面词汇陪练",
   description:
-    "完整 CET-4 词库的四选一单词复习工具，支持发音、复习列表与纠错练习。",
+    "面向 Word、Excel 和 PowerPoint 英文界面的四选一词汇练习工具，支持发音、复习与纠错。",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

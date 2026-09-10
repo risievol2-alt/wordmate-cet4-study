@@ -1,7 +1,7 @@
 {
-  "name": "wordmate-cet4-study",
-  "version": "1.0.0",
-  "description": "A lightweight CET-4 vocabulary review app with pronunciation, review lists, and mistake correction.",
+  "name": "wordmate-office-study",
+  "version": "1.1.0",
+  "description": "A lightweight English UI vocabulary trainer for Microsoft Word, Excel, and PowerPoint.",
   "license": "MIT",
   "repository": "https://github.com/risievol2-alt/wordmate-cet4-study",
   "private": true,
@@ -13,7 +13,7 @@
     "build": "vinext build",
     "start": "vinext start",
     "test": "npm run build && node --test tests/rendered-html.test.mjs",
-    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "lint": "eslint app tests --ignore-pattern dist --ignore-pattern .next --ignore-pattern work",
     "db:generate": "drizzle-kit generate"
   },
   "dependencies": {

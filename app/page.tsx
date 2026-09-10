@@ -5,13 +5,22 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 type WordEntry = {
   word: string;
   meaning: string;
-  pos: string;
+  category: Exclude<AppCategory, "all">;
 };
 
 type Mode = "learn" | "review" | "mistakes";
+type AppCategory = "all" | "common" | "word" | "excel" | "powerpoint";
 type Result = { selected: string; correct: boolean } | null;
 
-const STORAGE_KEY = "cet4-companion-progress-v1";
+const STORAGE_KEY = "office-companion-progress-v2";
+
+const CATEGORIES: Array<{ id: AppCategory; label: string; short: string }> = [
+  { id: "all", label: "全部", short: "ALL" },
+  { id: "common", label: "通用", short: "365" },
+  { id: "word", label: "Word", short: "W" },
+  { id: "excel", label: "Excel", short: "X" },
+  { id: "powerpoint", label: "PowerPoint", short: "P" },
+];
 
 function shuffle<T>(items: T[]) {
   const copy = [...items];
@@ -26,28 +35,20 @@ function parseVocabulary(source: string): WordEntry[] {
   return source
     .split(/\r?\n/)
     .map((line) => {
-      const divider = line.indexOf("\t");
-      if (divider < 1) return null;
-      const word = line.slice(0, divider).trim();
-      const rawMeaning = line.slice(divider + 1).trim();
-      const posMatch = rawMeaning.match(
-        /^(adj|adv|n|v|vt|vi|prep|conj|pron|num|interjection)\.?\s*/i,
+      const [word = "", meaning = "", rawCategory = ""] = line.split("\t");
+      const category = rawCategory.trim() as WordEntry["category"];
+      const validCategory = CATEGORIES.some(
+        (item) => item.id !== "all" && item.id === category,
       );
-      const pos = posMatch?.[1]?.toLowerCase() ?? "other";
-      const meaning = rawMeaning
-        .replace(
-          /^(adj|adv|n|v|vt|vi|prep|conj|pron|num|interjection)\.?\s*/i,
-          "",
-        )
-        .replace(/\s+/g, " ")
-        .trim();
-      return word && meaning ? { word, meaning, pos } : null;
+      return word.trim() && meaning.trim() && validCategory
+        ? { word: word.trim(), meaning: meaning.trim(), category }
+        : null;
     })
     .filter((entry): entry is WordEntry => Boolean(entry));
 }
 
 function optionScore(target: WordEntry, candidate: WordEntry) {
-  let score = candidate.pos === target.pos ? 12 : 0;
+  let score = candidate.category === target.category ? 18 : 0;
   const targetHead = target.meaning.slice(0, 2);
   const candidateHead = candidate.meaning.slice(0, 2);
   for (const character of targetHead) {
@@ -60,6 +61,7 @@ function optionScore(target: WordEntry, candidate: WordEntry) {
 export default function Home() {
   const [vocabulary, setVocabulary] = useState<WordEntry[]>([]);
   const [mode, setMode] = useState<Mode>("learn");
+  const [category, setCategory] = useState<AppCategory>("all");
   const [current, setCurrent] = useState<WordEntry | null>(null);
   const [options, setOptions] = useState<WordEntry[]>([]);
   const [result, setResult] = useState<Result>(null);
@@ -72,14 +74,16 @@ export default function Home() {
   );
 
   useEffect(() => {
-    fetch("/cet4.tsv")
+    fetch("/office.tsv")
       .then((response) => response.text())
       .then((source) => setVocabulary(parseVocabulary(source)));
     try {
       const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) ?? "{}");
-      setReviewWords(Array.isArray(saved.review) ? saved.review : []);
-      setMistakeWords(Array.isArray(saved.mistakes) ? saved.mistakes : []);
-      setAttempts(Number(saved.attempts) || 0);
+      queueMicrotask(() => {
+        setReviewWords(Array.isArray(saved.review) ? saved.review : []);
+        setMistakeWords(Array.isArray(saved.mistakes) ? saved.mistakes : []);
+        setAttempts(Number(saved.attempts) || 0);
+      });
     } catch {
       // Start clean if local data is invalid.
     }
@@ -102,14 +106,34 @@ export default function Home() {
     [vocabulary],
   );
 
+  const categoryVocabulary = useMemo(
+    () =>
+      category === "all"
+        ? vocabulary
+        : vocabulary.filter((entry) => entry.category === category),
+    [category, vocabulary],
+  );
+
   const chooseNext = useCallback((excludeWord?: string, strictExclude = false) => {
     if (!vocabulary.length) return;
     const list =
       mode === "review"
-        ? reviewWords.map((word) => wordMap.get(word)).filter(Boolean)
+        ? reviewWords
+            .map((word) => wordMap.get(word))
+            .filter(
+              (entry): entry is WordEntry =>
+                entry !== undefined &&
+                (category === "all" || entry.category === category),
+            )
         : mode === "mistakes"
-          ? mistakeWords.map((word) => wordMap.get(word)).filter(Boolean)
-          : vocabulary;
+          ? mistakeWords
+              .map((word) => wordMap.get(word))
+              .filter(
+                (entry): entry is WordEntry =>
+                  entry !== undefined &&
+                  (category === "all" || entry.category === category),
+              )
+          : categoryVocabulary;
     const basePool = list as WordEntry[];
     const filteredPool = excludeWord
       ? basePool.filter((entry) => entry.word !== excludeWord)
@@ -121,7 +145,7 @@ export default function Home() {
       return;
     }
     const next = pool[Math.floor(Math.random() * pool.length)];
-    const distractors = vocabulary
+    const distractors = categoryVocabulary
       .filter(
         (entry) =>
           entry.word !== next.word && entry.meaning !== next.meaning,
@@ -135,11 +159,15 @@ export default function Home() {
     setCurrent(next);
     setOptions(shuffle([next, ...picked]));
     setResult(null);
-  }, [mistakeWords, mode, reviewWords, vocabulary, wordMap]);
+  }, [category, categoryVocabulary, mistakeWords, mode, reviewWords, vocabulary.length, wordMap]);
 
   useEffect(() => {
-    chooseNext();
-  }, [mode, vocabulary.length]);
+    const timer = window.setTimeout(() => chooseNext(), 0);
+    return () => window.clearTimeout(timer);
+    // chooseNext also changes when a saved list changes; advancing is controlled
+    // by answer() in that case, so only these mode-defining values belong here.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [category, mode, vocabulary.length]);
 
   useEffect(
     () => () => {
@@ -211,12 +239,29 @@ export default function Home() {
     setPanelOpen(null);
   };
 
+  const switchCategory = (nextCategory: AppCategory) => {
+    if (nextTimerRef.current !== null) {
+      window.clearTimeout(nextTimerRef.current);
+      nextTimerRef.current = null;
+    }
+    setCategory(nextCategory);
+    setResult(null);
+    setPanelOpen(null);
+  };
+
+  const categoryLabel =
+    CATEGORIES.find((item) => item.id === current?.category)?.label ?? "Office";
+
   const activeList =
     panelOpen === "review"
       ? reviewWords
       : panelOpen === "mistakes"
         ? mistakeWords
         : [];
+  const visibleActiveList = activeList.filter((word) => {
+    const entry = wordMap.get(word);
+    return category === "all" || entry?.category === category;
+  });
 
   return (
     <main className="app-shell">
@@ -229,7 +274,7 @@ export default function Home() {
           <span className="brand-mark">W</span>
           <span>
             <strong>Wordmate</strong>
-            <small>四级词汇陪练</small>
+            <small>OFFICE 英文界面陪练</small>
           </span>
         </button>
         <div className="header-progress">
@@ -272,9 +317,9 @@ export default function Home() {
             </button>
           </nav>
           <div className="library-note">
-            <span>完整词库</span>
+            <span>Office 界面词库</span>
             <strong>{vocabulary.length || "—"}</strong>
-            <small>CET-4 词条</small>
+            <small>WORD · EXCEL · PPT</small>
           </div>
         </aside>
 
@@ -290,7 +335,7 @@ export default function Home() {
               </span>
               <h1>
                 {mode === "learn"
-                  ? "今天，再记住一个。"
+                  ? "把英文界面，练成熟悉操作。"
                   : mode === "review"
                     ? "把记忆再加深一点。"
                     : "把错题变成得分点。"}
@@ -299,11 +344,32 @@ export default function Home() {
             <span className="keyboard-hint">按 1–4 快速选择</span>
           </div>
 
+          <div className="product-filter" aria-label="选择软件词库">
+            {CATEGORIES.map((item) => {
+              const count =
+                item.id === "all"
+                  ? vocabulary.length
+                  : vocabulary.filter((entry) => entry.category === item.id)
+                      .length;
+              return (
+                <button
+                  key={item.id}
+                  className={category === item.id ? "active" : ""}
+                  onClick={() => switchCategory(item.id)}
+                >
+                  <span>{item.short}</span>
+                  <strong>{item.label}</strong>
+                  <small>{count}</small>
+                </button>
+              );
+            })}
+          </div>
+
           <article className="quiz-card">
             {!vocabulary.length ? (
               <div className="empty-state">
                 <span className="loader" />
-                <h2>正在装载四级词库</h2>
+                <h2>正在装载 Office 界面词库</h2>
                 <p>马上开始第一题…</p>
               </div>
             ) : !current ? (
@@ -323,9 +389,13 @@ export default function Home() {
               <>
                 <div className="word-area">
                   <span className="question-count">
-                    QUESTION {String(attempts + 1).padStart(2, "0")}
+                    {categoryLabel.toUpperCase()} · QUESTION{" "}
+                    {String(attempts + 1).padStart(2, "0")}
                   </span>
-                  <button className="word-button" onClick={speak}>
+                  <button
+                    className={`word-button ${current.word.length > 18 ? "long-term" : ""}`}
+                    onClick={speak}
+                  >
                     <span>{current.word}</span>
                     <i aria-hidden="true">听</i>
                   </button>
@@ -410,10 +480,10 @@ export default function Home() {
               </button>
             </div>
             <div className="word-list">
-              {!activeList.length ? (
+              {!visibleActiveList.length ? (
                 <p className="panel-empty">这里还没有单词。</p>
               ) : (
-                activeList.slice(0, 100).map((word, index) => (
+                visibleActiveList.slice(0, 100).map((word, index) => (
                   <div key={word}>
                     <span>{String(index + 1).padStart(2, "0")}</span>
                     <strong>{word}</strong>
@@ -427,7 +497,7 @@ export default function Home() {
               onClick={() =>
                 switchMode(panelOpen === "review" ? "review" : "mistakes")
               }
-              disabled={!activeList.length}
+              disabled={!visibleActiveList.length}
             >
               开始{panelOpen === "review" ? "复习" : "纠错"}
             </button>
