@@ -6,8 +6,8 @@
 
 ## 功能特点
 
-- **421 个高频界面词条**：通用 108、Word 96、Excel 112、PowerPoint 105。
-- **按软件筛选**：可练习全部词条，也可单独选择通用、Word、Excel 或 PowerPoint。
+- **974 个不重复界面词条**：通用 178、Word 专属 232、Excel 专属 281、PowerPoint 专属 283。
+- **按软件筛选**：可练习全部词条，也可单独选择通用、Word、Excel 或 PowerPoint；选择任一软件时会自动包含全部通用词。
 - **贴近真实界面**：覆盖功能区、文件管理、排版、审阅、公式、数据、图表、动画和放映等场景。
 - **四选一练习**：一个正确释义配三个干扰项，优先从同一软件分类中生成选项。
 - **英文发音**：点击术语，通过浏览器 Web Speech API 播放发音。
@@ -17,12 +17,14 @@
 
 ## 词库范围
 
-| 分类 | 词条数 | 主要内容 |
-| --- | ---: | --- |
-| 通用 Office | 108 | Ribbon、Tab、Save As、Paste Special、Options、Accessibility Checker 等 |
-| Word | 96 | Styles、Margins、Section Break、Mail Merge、Track Changes、Table of Contents 等 |
-| Excel | 112 | Formula Bar、AutoSum、Data Validation、PivotTable、Freeze Panes、Goal Seek 等 |
-| PowerPoint | 105 | Slide Layout、Transitions、Animation Pane、Presenter View、Slide Master 等 |
+| 分类 | 专属词条 | 实际练习量 | 主要内容 |
+| --- | ---: | ---: | --- |
+| 通用 Office | 178 | 178 | Ribbon、Tab、Save As、Paste Special、Options、Accessibility Checker 等 |
+| Word | 232 | 410 | Styles、Margins、Section Break、Mail Merge、Track Changes、Table of Contents 等 |
+| Excel | 281 | 459 | Formula Bar、AutoSum、Data Validation、PivotTable、Freeze Panes、Goal Seek 等 |
+| PowerPoint | 283 | 461 | Slide Layout、Transitions、Animation Pane、Presenter View、Slide Master 等 |
+
+Word、Excel 和 PowerPoint 的“实际练习量”都包含 178 个通用 Office 词条。因此只学习某一个软件分类，也不会漏掉通用界面命令；“全部”分类仍对每个词条只计算一次。
 
 词条参考当前 Microsoft 365 英文界面和微软官方帮助文档整理，包括 [Office 功能区](https://support.microsoft.com/en-us/office/customize-the-ribbon-in-office-00f24ca7-6021-48d3-9514-a31a460ecb31)、[Excel 快捷键与命令](https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f) 和 [PowerPoint 功能区说明](https://support.microsoft.com/en-us/powerpoint/where-are-the-menus-and-toolbars)。不同 Microsoft 365 版本、平台和账户可能显示略有差异。
 

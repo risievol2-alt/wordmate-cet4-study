@@ -1,18 +1,136 @@
-File	文件选项卡；管理新建、打开、保存、打印等操作	common
-Home	开始选项卡；包含最常用的编辑和格式命令	common
-Insert	插入选项卡；插入表格、图片、图表等内容	common
-Draw	绘图选项卡；使用画笔、橡皮擦和墨迹工具	common
-Design	设计选项卡；设置主题、颜色和整体外观	common
-Layout	布局选项卡；调整页面或对象的排列方式	common
-Review	审阅选项卡；校对、批注、比较和保护内容	common
-View	视图选项卡；切换显示方式和窗口设置	common
-Help	帮助选项卡；查找帮助、培训和反馈	common
-Search	搜索框；查找命令、帮助或文档内容	common
+Show Quick Access Toolbar	显示快速访问工具栏	common
+Hide Quick Access Toolbar	隐藏快速访问工具栏	common
+Show Command Labels	显示命令标签	common
+Hide Command Labels	隐藏命令标签	common
+Add to Quick Access Toolbar	添加到快速访问工具栏	common
+More Commands	更多命令	common
+Commands Not in the Ribbon	不在功能区中的命令	common
+Add	添加	common
+Customize Quick Access Toolbar	自定义快速访问工具栏	common
+Move Up	上移	common
+Move Down	下移	common
+Rename	重命名	common
+Collapse the ribbon	折叠功能区	common
+Ribbon Display Options	功能区显示选项	common
+Customize the Ribbon	自定义功能区	common
+Remove	删除	common
+New Group	新建组	common
+Symbol	符号	common
+Main Tabs	主选项卡	common
+Choose commands from	从下列位置选择命令	common
+Popular Commands	常用命令	common
+Reset	重置	common
+Import/Export	导入/导出	common
+Import customization file	导入自定义文件	common
+Scatter	散点图	common
+High-low-close	盘高-盘低-收盘股价图	common
+Open-high-low-close	开盘-盘高-盘低-收盘股价图	common
+Volume-high-low-close	成交量-盘高-盘低-收盘股价图	common
+Volume-open-high-low-close	成交量-开盘-盘高-盘低-收盘股价图	common
+3-D surface	三维曲面	common
+Wireframe 3-D surface	线框三维曲面	common
+Filled radar	填充雷达图	common
+Histogram	直方图	common
+Custom combination	自定义组合	common
+Change Chart Type	更改图表类型	common
+Edit Data in Microsoft Excel	在 Microsoft Excel 中编辑数据	common
+Entire column	整列	common
+Select Data	选择数据	common
+Select Data Source	选择数据源	common
+Series options	系列选项	common
+Format Data Point	设置数据点格式	common
+Set as total	设为总计	common
+Format Data Series	设置数据系列格式	common
+Show connector lines	显示连接线	common
+Increase	增加	common
+Decrease	减少	common
+Total	汇总	common
+Gap width	分类间距	common
+Show inner points	显示内部点	common
+Show outlier points	显示离群值点	common
+Show mean markers	显示平均值标记	common
+Cut	剪切	common
+Copy	复制	common
+Paste	粘贴	common
+Home	开始	common
+Insert	插入	common
+Review	审阅	common
+View	视图	common
+Share	共享	common
+Comments	批注	common
+File	文件	common
+New	新建	common
+Save a Copy	保存副本	common
+Search	搜索	common
+Close	关闭	common
+Font	字体	common
+Font Color	字体颜色	common
+Design	设计	common
+Layout	布局；版式	common
+Help	帮助	common
+Clipboard	剪贴板	common
+Replace	替换	common
+Styles	样式	common
+Print Layout	打印布局；打印版式	common
+Print	打印	common
+Open	打开	common
+Find	查找	common
+Go To	定位	common
+Macro	宏	common
+Selection	选择	common
+Save As	另存为	common
+Printer	打印机	common
+File name	文件名	common
+Superscript	上标	common
+Subscript	下标	common
+Advanced	高级	common
+Play	播放	common
+Pause	暂停	common
+Link Settings	链接设置	common
+Post comment	发布批注	common
+Insert Hyperlink	插入超链接	common
+Themes	主题	common
+Create New Theme Colors	新建主题颜色	common
+Insert Picture	插入图片	common
+Page Setup	页面设置	common
+Vertical alignment	垂直对齐方式	common
+Paragraph	段落	common
+Editing options	编辑选项	common
+Image Size and Quality	图像大小和质量	common
+Chart	图表	common
+Save	保存	common
+General	常规	common
+Options	选项	common
+This PC	此电脑	common
+OK	确定	common
+Category	类别	common
+Customize	自定义	common
+Preview	预览	common
+Browse	浏览	common
+Save as type	保存类型	common
+Copies	份数	common
+Create	创建	common
+Previous	上一个；上一张	common
+Pages	页面；页码范围	common
+Settings	设置	common
+Undo	撤消	common
+Yes	是	common
+No	否	common
+Cancel	取消	common
+Number	数字	common
+Paste Special	选择性粘贴	common
+Zoom	缩放	common
+Normal	普通	common
+Print What	打印内容	common
+Format	格式	common
+List	列表	common
+Custom	自定义	common
+Editing	编辑	common
+Color	颜色；彩色	common
 Ribbon	功能区；窗口顶部集中显示命令的区域	common
 Tab	选项卡；功能区顶部的功能分类标签	common
 Group	命令组；功能区内相关命令的集合	common
 Command	命令；执行某项具体操作的按钮或菜单项	common
-Quick Access Toolbar	快速访问工具栏；放置保存、撤销等常用命令	common
 Backstage View	后台视图；单击文件后显示的文档管理界面	common
 Title Bar	标题栏；显示文件名和应用名称	common
 Status Bar	状态栏；窗口底部显示状态和视图信息	common
@@ -23,107 +141,226 @@ Task Pane	任务窗格；在窗口侧边显示的工具面板	common
 Drop-down List	下拉列表；展开后选择其中一项	common
 Check Box	复选框；可以选中或取消的方框选项	common
 Radio Button	单选按钮；在一组选项中只能选择一个	common
-Browse	浏览；查找本机或网络中的文件位置	common
-New	新建文件	common
-Open	打开已有文件	common
-Close	关闭当前文件	common
-Save	保存当前文件	common
-Save As	另存为；用新名称、位置或格式保存	common
-Print	打印文件	common
-Share	共享文件并邀请他人协作	common
 Export	导出为其他文件格式	common
-Import	导入外部数据或内容	common
-Options	选项；打开应用程序设置	common
 Account	账户；管理登录、许可和主题	common
 Info	信息；查看属性、保护和版本信息	common
 Protect	保护文件，限制打开或编辑	common
 Inspect Document	检查文档中的隐藏信息和潜在问题	common
 Version History	版本历史记录；查看或恢复旧版本	common
-Properties	属性；文件的标题、作者、大小等信息	common
-Undo	撤销上一步操作	common
-Redo	重做被撤销的操作	common
 Repeat	重复执行上一个操作	common
-Cut	剪切所选内容	common
-Copy	复制所选内容	common
-Paste	粘贴剪贴板中的内容	common
-Paste Special	选择性粘贴；指定粘贴值、格式等内容	common
-Clipboard	剪贴板；临时保存复制或剪切的内容	common
 Format Painter	格式刷；复制一个对象的格式到另一个对象	common
-Find	查找文本或内容	common
-Replace	查找并替换文本或格式	common
-Select All	全选当前范围内的所有内容	common
-Zoom	缩放显示比例	common
 Zoom In	放大显示	common
 Zoom Out	缩小显示	common
 Full Screen	全屏显示	common
-Minimize	最小化窗口	common
 Maximize	最大化窗口	common
 Restore Down	向下还原窗口大小	common
 Pin	固定文件、窗格或功能区	common
 Unpin	取消固定	common
-Collapse the Ribbon	折叠功能区	common
-Customize the Ribbon	自定义功能区的选项卡和命令	common
-Add-ins	加载项；为 Office 增加功能的扩展程序	common
 Template	模板；预先设计好的文件样式和结构	common
 Theme	主题；统一的颜色、字体和效果组合	common
-Font	字体	common
-Font Size	字号	common
-Bold	加粗文字	common
-Italic	倾斜文字	common
-Underline	为文字添加下划线	common
-Strikethrough	为文字添加删除线	common
-Superscript	上标；将文字缩小并抬高	common
-Subscript	下标；将文字缩小并降低	common
-Text Highlight Color	文本突出显示颜色	common
-Font Color	字体颜色	common
-Alignment	对齐方式	common
 Align Left	左对齐	common
-Center	居中对齐	common
 Align Right	右对齐	common
 Justify	两端对齐	common
-Bullets	项目符号列表	common
-Numbering	编号列表	common
 Decrease Indent	减少缩进	common
 Increase Indent	增加缩进	common
-Line Spacing	行距或段落间距	common
-Sort	排序内容	common
 Show/Hide	显示或隐藏格式标记或界面元素	common
-Hyperlink	超链接；跳转到网页、文件或文档位置	common
-Bookmark	书签；标记文件中的特定位置	common
 Comment	批注；为内容添加协作说明	common
 Spelling & Grammar	拼写和语法检查	common
 Accessibility Checker	辅助功能检查器；查找可访问性问题	common
 Translate	翻译所选内容或整个文件	common
 Language	语言；设置校对或翻译语言	common
 Editor	编辑器；检查拼写、语法和写作建议	common
-Thesaurus	同义词库	common
-AutoSave	自动保存	common
 Read Only	只读；可以查看但限制修改	common
-Compatibility Mode	兼容模式；使用旧版文件格式的受限状态	common
 Recover Unsaved Files	恢复未保存的文件	common
-Recent	最近使用的文件列表	common
 OneDrive	微软云端存储服务	common
 Sign In	登录账户	common
 Sign Out	退出账户	common
 Feedback	反馈；向微软发送意见或问题	common
-Document	文档；Word 文件的主要编辑对象	word
-Page	页面	word
-Paragraph	段落	word
-Styles	样式库；快速应用标题、正文等格式	word
-Normal	正文样式	word
-Heading 1	一级标题样式	word
-Heading 2	二级标题样式	word
-Clear All Formatting	清除所有格式，恢复为普通文本	word
+Quick Access Toolbar	快速访问工具栏	word
+AutoSave	自动保存	word
+Navigation	导航	word
+Read Mode	阅读模式	word
+Read Aloud	朗读	word
+Immersive Reader	沉浸式阅读器	word
+Percent	百分比	word
+Tell Me	操作说明搜索	word
+Mailings	邮件	word
+Developer	开发工具	word
+Object	对象	word
+Heading 1	标题 1	word
+Heading 2	标题 2	word
+Heading 3	标题 3	word
+Apply Styles	应用样式	word
+Outline	大纲	word
+Draft	草稿	word
+Reveal Formatting	显示格式设置	word
+Bookmark	书签	word
+Thesaurus	同义词库	word
+Translator	翻译	word
+AutoCorrect	自动更正	word
+Table of Contents	目录	word
+Navigation Pane	导航窗格	word
+Page Number	页码	word
+Header	页眉	word
+Footer	页脚	word
+Save Print Output As	将打印输出另存为	word
+Dark Gray	深灰色	word
+Font style	字形	word
+Font size	字号	word
+Underline style	下划线样式	word
+Underline color	下划线颜色	word
+Strikethrough	删除线	word
+Double strikethrough	双删除线	word
+Small caps	小号大写字母	word
+All caps	全部大写	word
+Hidden	隐藏	word
+Set As Default	设为默认值	word
+Text Effects	文本效果	word
+Bullet Library	项目符号库	word
+Numbering Library	编号库	word
+Transcribe	转录	word
+Start recording	开始录制	word
+Simple Markup	简单标记	word
+No Markup	无标记	word
+All Markup	所有标记	word
+Original	原始	word
+Show Markup	显示标记	word
+Reviewing Pane	审阅窗格	word
+Track Changes	修订	word
+Lock Tracking	锁定跟踪	word
+Contextual View	上下文视图	word
+Reply to comment	回复批注	word
+Resolve comment	解决批注	word
+Address	地址	word
+Text to display	要显示的文本	word
+Recent items	最近使用的项目	word
+Look in	查找范围	word
+Subject	主题	word
+Select a place in this document	选择此文档中的位置	word
+Bookmark name	书签名称	word
+Set Hyperlink ScreenTip	设置超链接屏幕提示	word
+AutoCorrect options	自动更正选项	word
+AutoFormat As You Type	键入时自动套用格式	word
+Date and Time	日期和时间	word
+References	引用	word
+Next Footnote	下一个脚注	word
+Previous Footnote	上一个脚注	word
+Show Notes	显示备注	word
+View footnote area	查看脚注区域	word
+Next Endnote	下一个尾注	word
+Previous Endnote	上一个尾注	word
+Footnote	脚注	word
+Endnote	尾注	word
+Endnote Text	尾注文本	word
+Convert all footnotes to endnotes	将所有脚注转换为尾注	word
+Convert all endnotes to footnotes	将所有尾注转换为脚注	word
+Swap footnotes and endnotes	交换脚注和尾注	word
+Header row	标题行	word
+Alt Text	替换文字	word
+Edit Text	编辑文本	word
+In Line with Text	嵌入型	word
+Blank document	空白文档	word
+Search for online templates	搜索联机模板	word
+This document only	仅此文档	word
+All documents	所有文档	word
+Record Macro	录制宏	word
+Macro name	宏名称	word
+Customize keyboard	自定义键盘	word
+Macros	宏	word
+Cut, copy, and paste	剪切、复制和粘贴	word
+Show document content	显示文档内容	word
+Display	显示	word
+File Locations	文件位置	word
+Enable Live Preview	启用实时预览	word
+Update document content while dragging	在拖动时更新文档内容	word
+ScreenTip style	屏幕提示样式	word
+User name	用户名	word
+Initials	缩写	word
+Office Background	Office 背景	word
+Office Theme	Office 主题	word
+Indents and Spacing	缩进和间距	word
+Customize Ribbon	自定义功能区	word
+Picture Control	图片控件	word
+Controls	控件	word
+Properties	属性	word
+Display Name	显示名称	word
+Content Control Properties	内容控件属性	word
+Locking	锁定	word
+Content control cannot be deleted	无法删除内容控件	word
+Contents cannot be edited	无法编辑内容	word
+Enter new password (optional)	输入新密码 (可选)	word
+Categories	类别	word
+Commands	命令	word
+Current keys	当前快捷键	word
+Press new shortcut key	请按新快捷键	word
+Word Options	Word 选项	word
+Save changes in	将更改保存在	word
+Assign	指定	word
+New Tab	新建选项卡	word
+All Commands	所有命令	word
+Show white space between pages in Print Layout view	在“打印布局”视图中显示页面之间的空白	word
+Show highlighter marks	显示荧光笔标记	word
+Show document tooltips on hover	悬停时显示文档工具提示	word
+Tab characters	制表符	word
+Paragraph marks	段落标记	word
+Hidden text	隐藏文本	word
+Optional hyphens	可选连字符	word
+Object anchors	对象定位点	word
+Show all formatting marks	显示所有格式标记	word
+Print drawings created in Word	打印在 Word 中创建的绘图	word
+Print background colors and images	打印背景色和图像	word
+Print document properties	打印文档属性	word
+Print hidden text	打印隐藏文本	word
+Update fields before printing	打印前更新字段	word
+Update linked data before printing	打印前更新链接数据	word
+Line spacing	行距	word
+1.5 lines	1.5 倍行距	word
+Double	2 倍行距	word
+Never change the document page color	从不更改文档页面颜色	word
+Compatibility Mode	兼容模式	word
+Add a Place	添加位置	word
+Edit Document	编辑文档	word
+Markup	标记	word
+Insertions and Deletions	插入和删除	word
+All Reviewers	所有审阅者	word
+Accept	接受	word
+Reject	拒绝	word
+Accept This Change	接受此更改	word
+Accept All Changes Shown	接受显示的所有更改	word
+Accept All Changes	接受所有更改	word
+Reject Change	拒绝更改	word
+Reject All Changes Shown	拒绝显示的所有更改	word
+Reject All Changes	拒绝所有更改	word
+Accept Insertion	接受插入	word
+Accept Deletion	接受删除	word
+Reject Deletion	拒绝删除	word
+Document Info	文档信息	word
+Print Markup	打印标记	word
+Reviewing Pane Vertical	垂直审阅窗格	word
+Print All Pages	打印所有页面	word
+Print Current Page	打印当前页面	word
+Custom Print	自定义打印	word
+Specific people	特定人员	word
+Bold	加粗	word
+Italic	倾斜	word
+Underline	下划线	word
+Increase Font Size	增大字号	word
+Decrease Font Size	减小字号	word
 Change Case	更改大小写	word
-Text Effects and Typography	文本效果和版式；设置轮廓、阴影等效果	word
+Clear All Formatting	清除所有格式	word
+Text Effects and Typography	文本效果和版式	word
+Text Highlight Color	文本突出显示颜色	word
+Document Formatting	文档格式	word
+Paragraph Spacing	段落间距	word
+Custom Paragraph Spacing	自定义段落间距	word
+Redo	恢复	word
+Minimize	最小化	word
+Restore	还原	word
+Recent	最近	word
+Document	文档；Word 文件的主要编辑对象	word
 Shading	底纹；为段落或表格添加背景色	word
-Borders	边框；为段落、页面或表格添加线框	word
 Multilevel List	多级列表	word
 Margins	页边距	word
-Orientation	纸张方向；纵向或横向	word
-Size	纸张大小	word
-Columns	分栏；将正文排成多栏	word
-Breaks	分隔符；插入分页符或分节符	word
 Page Break	分页符；从下一页开始内容	word
 Section Break	分节符；创建可独立设置格式的节	word
 Line Numbers	行号	word
@@ -133,42 +370,23 @@ Blank Page	空白页	word
 Page Color	页面颜色	word
 Page Borders	页面边框	word
 Watermark	水印；在页面背景中显示淡色文字或图片	word
-Table	表格	word
-Pictures	图片	word
-Online Pictures	联机图片	word
-Shapes	形状	word
 Icons	图标	word
 SmartArt	SmartArt 图形；可视化列表和流程	word
-Screenshot	屏幕截图	word
-Header	页眉	word
-Footer	页脚	word
-Page Number	页码	word
-Text Box	文本框	word
 WordArt	艺术字	word
 Drop Cap	首字下沉	word
 Signature Line	签名行	word
 Date & Time	日期和时间	word
-Object	对象；嵌入其他应用创建的内容	word
 Equation	公式	word
-Symbol	符号	word
-Table of Contents	目录	word
 Add Text	添加文本；设置目录中的标题级别	word
 Update Table	更新目录、图表目录或索引	word
-Footnote	脚注；位于页面底部的补充说明	word
-Endnote	尾注；位于文档或节末尾的补充说明	word
-Next Footnote	跳转到下一条脚注	word
-Show Notes	显示脚注或尾注区域	word
 Insert Citation	插入引文	word
 Manage Sources	管理文献来源	word
-Style	引文格式样式，如 APA 或 MLA	word
 Bibliography	参考文献目录	word
 Insert Caption	插入题注	word
 Cross-reference	交叉引用；引用标题、图表或页码	word
 Mark Entry	标记索引项	word
 Insert Index	插入索引	word
-Mailings	邮件选项卡；邮件合并、信封和标签工具	word
 Envelopes	创建和打印信封	word
-Labels	创建和打印标签	word
 Start Mail Merge	开始邮件合并	word
 Select Recipients	选择邮件合并收件人	word
 Edit Recipient List	编辑收件人列表	word
@@ -177,46 +395,229 @@ Greeting Line	问候语行	word
 Insert Merge Field	插入合并域	word
 Preview Results	预览邮件合并结果	word
 Finish & Merge	完成并合并	word
-Track Changes	修订；记录文档中的更改	word
 Display for Review	审阅显示方式	word
-Show Markup	显示标记	word
-Reviewing Pane	审阅窗格	word
-Accept	接受修订	word
-Reject	拒绝修订	word
 Previous Change	上一处修订	word
 Next Change	下一处修订	word
 Compare	比较两个文档的差异	word
 Combine	合并多个作者的修订	word
 Restrict Editing	限制编辑	word
-Read Mode	阅读模式	word
-Print Layout	页面视图；按打印效果显示文档	word
 Web Layout	Web 版式视图	word
-Outline	大纲视图	word
-Draft	草稿视图	word
-Navigation Pane	导航窗格；按标题、页面或搜索结果导航	word
-Ruler	标尺	word
 Gridlines	网格线	word
 One Page	单页显示	word
 Multiple Pages	多页显示	word
 Page Width	按页宽显示	word
-Read Aloud	朗读文档	word
 Focus	专注模式；隐藏多余界面元素	word
 Word Count	字数统计	word
+Page Layout	页面布局	excel
+Formulas	公式	excel
+Data	数据	excel
+Number Format	数字格式	excel
+Format Cells	设置单元格格式	excel
+Delete	删除	excel
+Fill Down	向下填充	excel
+Currency	货币	excel
+Percentage	百分比	excel
+Date	日期	excel
+Time	时间	excel
+Quick Analysis	快速分析	excel
+Create Table	创建表	excel
+Workbook Statistics	工作簿统计信息	excel
+Error Checking	错误检查	excel
+Function Arguments	函数参数	excel
+Paste Name	粘贴名称	excel
+Microsoft Visual Basic For Applications Editor	Microsoft Visual Basic for Applications 编辑器	excel
+Power Query Editor	Power Query 编辑器	excel
+Insert Function	插入函数	excel
+Spelling	拼写检查	excel
+Page Break Preview	分页预览	excel
+AutoSum	自动求和	excel
+Select All	全选	excel
+Totals	总计	excel
+Charts	图表	excel
+Sort	排序	excel
+Sort Options	排序选项	excel
+Case sensitive	区分大小写	excel
+Sort On	排序依据	excel
+Order	顺序	excel
+A to Z	A 到 Z	excel
+Z to A	Z 到 A	excel
+Smallest to Largest	从最小到最大	excel
+Largest to Smallest	从最大到最小	excel
+Add Level	添加级别	excel
+Custom Sort	自定义排序	excel
+Custom AutoFilter	自定义自动筛选	excel
+Greater Than Or Equal To	大于或等于	excel
+And	和	excel
+Or	或	excel
+Two-Sided Printing	双面打印	excel
+Orientation	方向	excel
+Portrait	纵向	excel
+Landscape	横向	excel
+Page Size	页面大小	excel
+Custom Margins	自定义边距	excel
+Create PivotTable	创建数据透视表	excel
+PivotTable Fields	数据透视表字段	excel
+Rows	行	excel
+Columns	列	excel
+Values	值	excel
+Create PivotChart	创建数据透视图	excel
+PivotChart Fields	数据透视图字段	excel
+Insert Chart	插入图表	excel
+Column Labels	列标签	excel
+Row Labels	行标签	excel
+Insert Slicers	插入切片器	excel
+Pie	饼图	excel
+Doughnut	圆环图	excel
+Add Chart Element	添加图表元素	excel
+Chart title	图表标题	excel
+Legend	图例	excel
+Right	右侧	excel
+Top	顶部	excel
+Left	左侧	excel
+Bottom	底部	excel
+Find and Replace	查找和替换	excel
+Find what	查找内容	excel
+Find Format	查找格式	excel
+Alignment	对齐方式	excel
+Border	边框	excel
+Fill	填充	excel
+Replace with	替换为	excel
+Allow	允许	excel
+Whole Number	整数	excel
+Decimal	小数	excel
+Text Length	文本长度	excel
+Show input message when cell is selected	选定单元格时显示输入信息	excel
+Style	样式	excel
+Workbook Views	工作簿视图	excel
+Cells	单元格	excel
+Cell Size	单元格大小	excel
+Column Width	列宽	excel
+AutoFit Column Width	自动调整列宽	excel
+Keep Source Columns Widths	保留源列宽	excel
+Select All Sheets	选定全部工作表	excel
+Default Width	默认宽度	excel
+Row Height	行高	excel
+AutoFit Row Height	自动调整行高	excel
+Source	源	excel
+Ignore blank	忽略空白	excel
+In-cell dropdown	提供下拉箭头	excel
+Show error alert after invalid data is entered	输入无效数据时显示错误警报	excel
+Information	信息	excel
+Warning	警告	excel
+Stop	停止	excel
+Name Manager	名称管理器	excel
+Refers to	引用对象	excel
+Name Box	名称框	excel
+Apply these changes to all other cells with the same settings	对有同样设置的所有其他单元格应用这些更改	excel
+Error Alert	出错警告	excel
+Retry	重试	excel
+Data Tools	数据工具	excel
+Find & Select	查找和选择	excel
+Define Name	定义名称	excel
+Defined Names	已定义名称	excel
+Calculation Options	计算选项	excel
+Automatic	自动	excel
+Blank workbook	空白工作簿	excel
+Fill Color	填充颜色	excel
+Theme Colors	主题颜色	excel
+More Number Formats	其他数字格式	excel
+Table	表	excel
+Sort A to Z	升序	excel
+Sort Z to A	降序	excel
+Sparklines	迷你图	excel
+Sort by	主要关键字	excel
+Cell Color	单元格颜色	excel
+Cell Icon	单元格图标	excel
+Sort & Filter	排序和筛选	excel
+Filter	筛选	excel
+Next Page	下一页	excel
+Previous Page	上一页	excel
+Add-Ins	加载项	excel
+Excel Options	Excel 选项	excel
+Go	转到	excel
+Borders	边框	excel
+More Borders	更多边框	excel
+Line	线条	excel
+Presets	预设	excel
+No Border	无边框	excel
+Inside	内部	excel
+Erase Border	擦除边框	excel
+Cell Styles	单元格样式	excel
+New Cell Style	新建单元格样式	excel
+Style name	样式名称	excel
+Style Includes (By Example)	样式包括（举例）	excel
+Draw Borders	绘制边框	excel
+Draw Border Grid	绘制边框网格	excel
+Line Style	线条样式	excel
+Center	居中	excel
+Accounting	会计专用	excel
+Fraction	分数	excel
+Scientific	科学记数	excel
+Special	特殊	excel
+Data Range	数据区域	excel
+Sparkline Tools	迷你图工具	excel
+Date Axis Type	日期轴类型	excel
+Sparkline Date Range	迷你图日期范围	excel
+Custom Value	自定义值	excel
+Sparkline Vertical Axis Setting	迷你图垂直轴设置	excel
+Edit Single Sparkline's Data	编辑单个迷你图的数据	excel
+Edit Sparkline Data	编辑迷你图数据	excel
+Hidden and Empty Cell Settings	隐藏和空单元格设置	excel
+Gaps	间隙	excel
+Zero	零	excel
+Recommended Charts	推荐的图表	excel
+All Charts	所有图表	excel
+Chart Elements	图表元素	excel
+Chart Styles	图表样式	excel
+Chart Design	图表设计	excel
+Text	文本	excel
+Cell Values	单元格值	excel
+Custom List	自定义序列	excel
+Copy Level	复制级别	excel
+Delete Level	删除级别	excel
+On Top	在顶端	excel
+On Left	在左侧	excel
+On Bottom	在底端	excel
+On Right	在右侧	excel
+Import	导入	excel
+Custom Lists	自定义序列	excel
+Convert to range	转换为区域	excel
+Sort left to right	从左到右排序	excel
+Row	行	excel
+Oldest to Newest	从最旧到最新	excel
+Newest to Oldest	从最新到最旧	excel
+Expand the selection	展开选定区域	excel
+Continue with the current selection	以当前选定区域排序	excel
+Between	介于	excel
+Breaks	分隔符	excel
+Insert Page Break	插入分页符	excel
+Page	页面	excel
+Adjust to	缩放比例	excel
+Enable fill handle and cell drag-and-drop	启用填充柄和单元格拖放功能	excel
+Remove Page Break	删除分页符	excel
+Reset All Page Breaks	重设所有分页符	excel
+Show page breaks	显示分页符	excel
+Display options for this worksheet	此工作表的显示选项	excel
+My Add-ins	我的加载项	excel
+More Add-ins	更多加载项	excel
+Excel Add-ins	Excel 加载项	excel
+Remove Add-in	删除加载项	excel
+Manage	管理	excel
+COM Add-ins	COM 加载项	excel
+Add-Ins available	可用加载项	excel
+Automation servers available	可用的自动化服务器	excel
+Automation	自动化	excel
 Workbook	工作簿；Excel 文件	excel
 Worksheet	工作表；工作簿中的单个表页	excel
 Cell	单元格	excel
 Active Cell	活动单元格；当前选中的单元格	excel
 Range	单元格区域	excel
-Row	行	excel
 Column	列	excel
 Formula Bar	编辑单元格内容或公式的公式栏	excel
-Name Box	名称框；显示地址或跳转到指定区域	excel
 Sheet Tab	工作表标签	excel
 Fill Handle	填充柄；拖动以复制或延续序列	excel
 Function	函数；预定义的计算公式	excel
 Formula	公式；以等号开头的计算表达式	excel
-AutoSum	自动求和	excel
-Insert Function	插入函数并打开函数参数对话框	excel
 Recently Used	最近使用的函数	excel
 Financial	财务函数类别	excel
 Logical	逻辑函数类别	excel
@@ -224,24 +625,16 @@ Text Functions	文本函数类别	excel
 Date & Time Functions	日期和时间函数类别	excel
 Lookup & Reference	查找和引用函数类别	excel
 Math & Trig	数学和三角函数类别	excel
-Defined Names	定义的名称命令组	excel
-Name Manager	名称管理器	excel
-Define Name	定义名称	excel
 Use in Formula	在公式中使用已定义名称	excel
 Create from Selection	根据所选区域创建名称	excel
 Trace Precedents	追踪引用此单元格公式的前置单元格	excel
 Trace Dependents	追踪引用当前单元格的从属单元格	excel
 Remove Arrows	删除公式审核箭头	excel
 Show Formulas	显示公式而不是计算结果	excel
-Error Checking	公式错误检查	excel
 Evaluate Formula	逐步计算公式	excel
 Watch Window	监视窗口；持续查看关键单元格	excel
-Calculation Options	计算选项；设置自动或手动计算	excel
 Calculate Now	立即计算所有打开的工作簿	excel
 Calculate Sheet	计算当前工作表	excel
-Sort A to Z	升序排列	excel
-Sort Z to A	降序排列	excel
-Filter	筛选数据	excel
 Advanced Filter	高级筛选	excel
 Clear Filter	清除筛选条件	excel
 Reapply	重新应用排序和筛选	excel
@@ -254,7 +647,6 @@ Queries & Connections	查询和连接窗格	excel
 Refresh All	全部刷新外部数据连接	excel
 Get Data	获取数据	excel
 From Table/Range	从表格或区域创建查询	excel
-Power Query Editor	Power Query 编辑器；清洗和转换数据	excel
 Forecast Sheet	预测工作表	excel
 What-If Analysis	模拟分析	excel
 Goal Seek	单变量求解	excel
@@ -271,36 +663,21 @@ Hide Sheet	隐藏工作表	excel
 Unhide Sheet	取消隐藏工作表	excel
 Conditional Formatting	条件格式；按规则突出显示单元格	excel
 Format as Table	套用表格格式	excel
-Cell Styles	单元格样式	excel
 Insert Cells	插入单元格、行或列	excel
 Delete Cells	删除单元格、行或列	excel
-Format Cells	设置单元格数字、对齐、字体、边框等格式	excel
-AutoFit Column Width	自动调整列宽	excel
-AutoFit Row Height	自动调整行高	excel
 Lock Cell	锁定单元格以配合工作表保护	excel
 Merge & Center	合并后居中	excel
 Wrap Text	自动换行	excel
-Number Format	数字格式	excel
-General	常规数字格式	excel
-Accounting	会计专用格式	excel
-Currency	货币格式	excel
-Percentage	百分比格式	excel
 Comma Style	千位分隔样式	excel
 Increase Decimal	增加小数位数	excel
 Decrease Decimal	减少小数位数	excel
-Recommended Charts	推荐的图表	excel
 PivotTable	数据透视表	excel
 PivotChart	数据透视图	excel
-Sparklines	迷你图	excel
 Slicer	切片器；用按钮筛选表格或透视表	excel
 Timeline	日程表；按日期筛选数据透视表	excel
-PivotTable Fields	数据透视表字段窗格	excel
-Chart Elements	图表元素	excel
 Trendline	趋势线	excel
 Data Labels	数据标签	excel
 Axis Titles	坐标轴标题	excel
-Legend	图例	excel
-Page Break Preview	分页预览	excel
 Normal View	普通视图	excel
 Page Layout View	页面布局视图	excel
 Print Area	打印区域	excel
@@ -310,10 +687,221 @@ Headings	行号和列标	excel
 Protect Sheet	保护工作表	excel
 Protect Workbook	保护工作簿结构	excel
 Allow Edit Ranges	允许用户编辑区域	excel
-Workbook Statistics	工作簿统计信息	excel
 Analyze Data	分析数据；根据数据提供问题和见解	excel
-Quick Analysis	快速分析；显示格式、图表和汇总建议	excel
 Recommended PivotTables	推荐的数据透视表	excel
+Selection Pane	选择窗格	powerpoint
+Slide Show	幻灯片放映	powerpoint
+Outline View	大纲视图	powerpoint
+Slide Sorter	幻灯片浏览	powerpoint
+Move	移动	powerpoint
+Bullets	项目符号	powerpoint
+Draw	绘图	powerpoint
+Animations	动画	powerpoint
+Recording	录制	powerpoint
+Slide Show Help	幻灯片放映帮助	powerpoint
+Presenter View	演示者视图	powerpoint
+Use Presenter View	使用演示者视图	powerpoint
+Notes	备注	powerpoint
+Blank Presentation	空白演示文稿	powerpoint
+Reading View	阅读视图	powerpoint
+Slide Master	幻灯片母版	powerpoint
+Pictures	图片	powerpoint
+Slide Size	幻灯片大小	powerpoint
+Allow text to be dragged and dropped	允许拖放文本	powerpoint
+Screenshot	屏幕截图	powerpoint
+Maximum number of undos	最大撤消数	powerpoint
+Use smart cut and paste	使用智能剪切和粘贴	powerpoint
+Show Paste Options button when content is pasted	粘贴内容时显示“粘贴选项”按钮	powerpoint
+Paste Options	粘贴选项	powerpoint
+Discard editing data	放弃编辑数据	powerpoint
+Do not compress images in file	不要压缩文件中的图像	powerpoint
+Default resolution	默认分辨率	powerpoint
+High fidelity	高保真	powerpoint
+Recent Documents	最近使用的文档	powerpoint
+Show vertical ruler	显示垂直标尺	powerpoint
+Show	显示	powerpoint
+Ruler	标尺	powerpoint
+Disable Slide Show hardware graphics acceleration	禁用幻灯片放映硬件图形加速	powerpoint
+Automatically extend display when presenting on a laptop or tablet	在笔记本电脑或平板电脑上演示时自动扩展显示	powerpoint
+Show presence flags for selected items	显示所选项目的状态标志	powerpoint
+Open all documents using this view	使用此视图打开所有文档	powerpoint
+Show menu on right mouse click	单击鼠标右键时显示菜单	powerpoint
+Show popup toolbar	显示弹出工具栏	powerpoint
+End with black slide	以黑色幻灯片结尾	powerpoint
+Print in background	在后台打印	powerpoint
+Print TrueType fonts as graphics	将 TrueType 字体打印为图形	powerpoint
+High quality	高质量	powerpoint
+Align transparent graphics at printer resolution	在打印机分辨率下对齐透明图形	powerpoint
+Print slide numbers on handouts	在讲义上打印幻灯片编号	powerpoint
+When printing this document	打印此文档时	powerpoint
+Use the most recently used print settings	使用最近使用的打印设置	powerpoint
+Use the following print settings	使用以下打印设置	powerpoint
+Color/grayscale	颜色/灰度	powerpoint
+Print hidden slides	打印隐藏的幻灯片	powerpoint
+Show add-in user interface errors	显示加载项用户界面错误	powerpoint
+Effect Options	效果选项	powerpoint
+On Click	单击时	powerpoint
+With Previous	与上一动画同时	powerpoint
+After Previous	上一动画之后	powerpoint
+Duration	持续时间	powerpoint
+Delay	延迟	powerpoint
+Add Animation	添加动画	powerpoint
+Move Earlier	向前移动	powerpoint
+Move Later	向后移动	powerpoint
+Shape Format	形状格式	powerpoint
+Advanced Animation	高级动画	powerpoint
+Animation Pane	动画窗格	powerpoint
+Trigger	触发器	powerpoint
+On Bookmark	通过书签	powerpoint
+Shape	形状	powerpoint
+Size	大小	powerpoint
+Aspect Ratio	纵横比	powerpoint
+Crop	裁剪	powerpoint
+Picture Format	图片格式	powerpoint
+Adjust	调整	powerpoint
+Compression Options	压缩选项	powerpoint
+Delete cropped areas of pictures	删除图片的裁剪区域	powerpoint
+Apply only to this picture	仅应用于此图片	powerpoint
+Resolution	分辨率	powerpoint
+Sharpen/Soften	锐化和柔化	powerpoint
+Brightness/Contrast	亮度/对比度	powerpoint
+Sharpness	清晰度	powerpoint
+Brightness	亮度	powerpoint
+Contrast	对比度	powerpoint
+Compress Pictures	压缩图片	powerpoint
+Master Views	母版视图	powerpoint
+Handout	讲义	powerpoint
+Show Presenter View	显示演示者视图	powerpoint
+From Beginning	从头开始	powerpoint
+From Current Slide	从当前幻灯片	powerpoint
+Pointer Options	指针选项	powerpoint
+Arrow Options	箭头选项	powerpoint
+Ink Color	墨迹颜色	powerpoint
+Discard	放弃	powerpoint
+Keep	保留	powerpoint
+Eraser	橡皮擦	powerpoint
+Erase All Ink on Slide	擦除幻灯片上的所有墨迹	powerpoint
+Custom Range	自定义范围	powerpoint
+Slides	幻灯片	powerpoint
+Grayscale	灰度	powerpoint
+Hide Slide	隐藏幻灯片	powerpoint
+Unhide Slide	取消隐藏幻灯片	powerpoint
+See All Slides	查看所有幻灯片	powerpoint
+None	无	powerpoint
+Set Up Slide Show	设置幻灯片放映	powerpoint
+Show without animation	放映时不加动画	powerpoint
+By Paragraph	按段落	powerpoint
+By letter	按字母	powerpoint
+Play Selected	播放选定内容	powerpoint
+Appear	出现	powerpoint
+Fly In	飞入	powerpoint
+Timing	计时	powerpoint
+Start	开始	powerpoint
+Select	选择	powerpoint
+Custom Path	自定义路径	powerpoint
+Direction	方向	powerpoint
+Intensity	强度	powerpoint
+Rotation Axis	旋转轴	powerpoint
+Playback	播放	powerpoint
+Add Bookmark	添加书签	powerpoint
+Remove Bookmark	删除书签	powerpoint
+New Slide	新建幻灯片	powerpoint
+WordArt Styles	艺术字样式	powerpoint
+Text Fill	文本填充	powerpoint
+This Device	此设备	powerpoint
+Online Pictures	联机图片	powerpoint
+Shapes	形状	powerpoint
+Shape Styles	形状样式	powerpoint
+Start Slide Show	开始幻灯片放映	powerpoint
+Variants	变体	powerpoint
+Colors	颜色	powerpoint
+Customize Colors	自定义颜色	powerpoint
+Accent 1	强调文字颜色 1	powerpoint
+Hyperlink	超链接	powerpoint
+More Colors	更多颜色	powerpoint
+Standard	标准	powerpoint
+Name	名称	powerpoint
+Fonts	字体	powerpoint
+Customize Fonts	自定义字体	powerpoint
+Create New Theme Fonts	新建主题字体	powerpoint
+Heading font	标题字体	powerpoint
+Body font	正文字体	powerpoint
+Effects	效果	powerpoint
+Save Current Theme	保存当前主题	powerpoint
+Delete Slide	删除幻灯片	powerpoint
+Duplicate Slide	复制幻灯片	powerpoint
+Background	背景	powerpoint
+Replace Fonts	替换字体	powerpoint
+With	替换为	powerpoint
+Eyedropper	取色器	powerpoint
+Presentation Views	演示文稿视图	powerpoint
+Numbering	编号	powerpoint
+Bullets and Numbering	项目符号和编号	powerpoint
+Bulleted	项目符号	powerpoint
+Numbered	编号	powerpoint
+Picture	图片	powerpoint
+Convert to SmartArt	转换为 SmartArt	powerpoint
+Increase List Level	增加列表级别	powerpoint
+Title	标题	powerpoint
+Decrease List Level	降低列表级别	powerpoint
+Close Master View	关闭母版视图	powerpoint
+Offset	偏移量	powerpoint
+(normal text)	(普通文本)	powerpoint
+Subset	子集	powerpoint
+Superscripts and Subscripts	上标和下标	powerpoint
+Full Page Slides	整页幻灯片	powerpoint
+Notes Pages	备注页	powerpoint
+Handouts	讲义	powerpoint
+Copy Link	复制链接	powerpoint
+Next	下一张	powerpoint
+Zoom into slide	放大幻灯片	powerpoint
+Pen and laser pointer tools	笔和激光笔工具	powerpoint
+Black or unblack slide show	变黑或还原幻灯片放映	powerpoint
+Display Settings	显示设置	powerpoint
+Swap Presenter View and Slide Show	切换演示者视图和幻灯片放映	powerpoint
+Keep slides updated	保持幻灯片更新	powerpoint
+More slide show options	更多幻灯片放映选项	powerpoint
+Transitions	切换	powerpoint
+Apply To All	全部应用	powerpoint
+Title And Content	标题和内容	powerpoint
+Slide Layout	幻灯片版式	powerpoint
+Process	流程	powerpoint
+Cycle	循环	powerpoint
+Hierarchy	层次结构	powerpoint
+Relationship	关系	powerpoint
+Matrix	矩阵	powerpoint
+Demote	降级	powerpoint
+Promote	升级	powerpoint
+SmartArt Design	SmartArt 设计	powerpoint
+Change Colors	更改颜色	powerpoint
+SmartArt Styles	SmartArt 样式	powerpoint
+Transparent	透明	powerpoint
+Format Object	设置对象格式	powerpoint
+Reset Graphic	重置图形	powerpoint
+Current Selection	当前所选内容	powerpoint
+Format Selection	设置所选内容格式	powerpoint
+Tick Marks	刻度线	powerpoint
+Major tick mark type	主要刻度线类型	powerpoint
+Minor tick mark type	次要刻度线类型	powerpoint
+Labels	标签	powerpoint
+Axis Options	坐标轴选项	powerpoint
+Interval between labels	标签间隔	powerpoint
+Specify interval unit	指定间隔单位	powerpoint
+Label distance from axis	标签与坐标轴的距离	powerpoint
+Text Options	文本选项	powerpoint
+Text Box	文本框	powerpoint
+Text direction	文字方向	powerpoint
+Custom angle	自定义角度	powerpoint
+Horizontal (Categories) Axis Labels	水平(分类)轴标签	powerpoint
+Edit	编辑	powerpoint
+Axis label range	轴标签区域	powerpoint
+Decimal places	小数位数	powerpoint
+Linked to source	链接到源	powerpoint
+Design Ideas	设计灵感	powerpoint
+Background Styles	背景样式	powerpoint
+Add to Dictionary	添加到词典	powerpoint
+Proofing	校对	powerpoint
+Check spelling as you type	键入时检查拼写	powerpoint
 Presentation	演示文稿；PowerPoint 文件	powerpoint
 Slide	幻灯片	powerpoint
 Thumbnail Pane	缩略图窗格；显示所有幻灯片缩略图	powerpoint
@@ -321,53 +909,26 @@ Slide Pane	幻灯片窗格；编辑当前幻灯片的主区域	powerpoint
 Notes Pane	备注窗格；添加演讲者备注	powerpoint
 Placeholder	占位符；用于放置标题、文字或内容的框	powerpoint
 Title Slide	标题幻灯片版式	powerpoint
-New Slide	新建幻灯片	powerpoint
-Slide Layout	幻灯片版式	powerpoint
 Reset Slide	重置幻灯片占位符的位置和格式	powerpoint
 Add Section	新增节以组织幻灯片	powerpoint
-Duplicate Slide	复制幻灯片	powerpoint
-Hide Slide	隐藏幻灯片；放映时跳过该页	powerpoint
 Reuse Slides	重用幻灯片；从其他演示文稿插入页面	powerpoint
 Format Background	设置背景格式	powerpoint
 Designer	设计器；自动提供幻灯片设计建议	powerpoint
-Design Ideas	设计灵感	powerpoint
-Themes	主题库	powerpoint
-Variants	变体；主题的颜色、字体和效果组合	powerpoint
-Slide Size	幻灯片大小	powerpoint
-Standard	标准屏幕比例 4:3	powerpoint
 Widescreen	宽屏比例 16:9	powerpoint
-Transitions	切换选项卡；设置幻灯片之间的换页效果	powerpoint
 Transition to This Slide	切换到此幻灯片的效果库	powerpoint
-Effect Options	效果选项；调整切换或动画方向	powerpoint
 Transition Sound	切换声音	powerpoint
 Transition Duration	切换持续时间	powerpoint
-Apply to All	全部应用	powerpoint
 Advance Slide	换片方式	powerpoint
 On Mouse Click	单击鼠标时开始或换片	powerpoint
 After	经过指定时间后自动开始或换片	powerpoint
 Preview Transition	预览切换效果	powerpoint
-Animations	动画选项卡；设置对象的动态效果	powerpoint
-Animation Pane	动画窗格；查看和调整动画顺序	powerpoint
-Add Animation	添加动画	powerpoint
 Animation Painter	动画刷；复制对象的动画效果	powerpoint
-Trigger	触发器；单击指定对象时启动动画	powerpoint
 Animation Start	动画开始方式	powerpoint
-On Click	单击时开始动画	powerpoint
-With Previous	与上一动画同时开始	powerpoint
-After Previous	上一动画结束后开始	powerpoint
 Animation Duration	动画持续时间	powerpoint
-Delay	延迟；等待指定时间后播放动画	powerpoint
-Move Earlier	将动画顺序前移	powerpoint
-Move Later	将动画顺序后移	powerpoint
 Entrance	进入动画	powerpoint
 Emphasis	强调动画	powerpoint
 Exit	退出动画	powerpoint
 Motion Paths	动作路径动画	powerpoint
-Slide Show	幻灯片放映选项卡或放映模式	powerpoint
-From Beginning	从头开始放映	powerpoint
-From Current Slide	从当前幻灯片开始放映	powerpoint
-Presenter View	演示者视图；显示备注、计时和下一页	powerpoint
-Set Up Slide Show	设置幻灯片放映	powerpoint
 Rehearse Timings	排练计时	powerpoint
 Record Slide Show	录制幻灯片放映	powerpoint
 Use Timings	使用计时	powerpoint
@@ -377,8 +938,6 @@ Custom Slide Show	自定义幻灯片放映	powerpoint
 Laser Pointer	激光笔	powerpoint
 Pen	放映时使用的笔工具	powerpoint
 Highlighter	荧光笔	powerpoint
-See All Slides	查看所有幻灯片	powerpoint
-Zoom into Slide	放大幻灯片	powerpoint
 Black Screen	黑屏；暂时将放映画面变黑	powerpoint
 Captions & Subtitles	字幕和副标题	powerpoint
 Cameo	摄像头画面对象	powerpoint
@@ -400,10 +959,7 @@ Bring Forward	上移一层	powerpoint
 Bring to Front	置于顶层	powerpoint
 Send Backward	下移一层	powerpoint
 Send to Back	置于底层	powerpoint
-Selection Pane	选择窗格；管理对象名称、顺序和可见性	powerpoint
-Crop	裁剪图片	powerpoint
 Remove Background	删除图片背景	powerpoint
-Compress Pictures	压缩图片	powerpoint
 Artistic Effects	艺术效果	powerpoint
 Corrections	更正；调整图片锐度、亮度和对比度	powerpoint
 Picture Color	图片颜色	powerpoint
@@ -414,8 +970,5 @@ Change Shape	更改形状	powerpoint
 Smart Guides	智能参考线	powerpoint
 Guides	参考线	powerpoint
 Notes Page	备注页视图	powerpoint
-Slide Sorter	幻灯片浏览视图	powerpoint
-Reading View	阅读视图	powerpoint
-Slide Master	幻灯片母版	powerpoint
 Handout Master	讲义母版	powerpoint
 Notes Master	备注母版	powerpoint

@@ -46,7 +46,7 @@ test("ships categorized Office vocabulary and stable quiz controls", async () =>
   ]);
 
   const entries = vocabulary.split(/\r?\n/).filter(Boolean);
-  assert.equal(entries.length, 421);
+  assert.equal(entries.length, 974);
   const parsed = entries.map((entry) => entry.split("\t"));
   assert.ok(parsed.every((entry) => entry.length === 3));
   assert.deepEqual(
@@ -56,9 +56,19 @@ test("ships categorized Office vocabulary and stable quiz controls", async () =>
         parsed.filter((entry) => entry[2] === category).length,
       ]),
     ),
-    { common: 108, word: 96, excel: 112, powerpoint: 105 },
+    { common: 178, word: 232, excel: 281, powerpoint: 283 },
   );
-  assert.equal(new Set(parsed.map((entry) => entry[0].toLowerCase())).size, 421);
+  assert.equal(new Set(parsed.map((entry) => entry[0].toLowerCase())).size, 974);
+  const commonCount = parsed.filter((entry) => entry[2] === "common").length;
+  assert.deepEqual(
+    Object.fromEntries(
+      ["word", "excel", "powerpoint"].map((category) => [
+        category,
+        commonCount + parsed.filter((entry) => entry[2] === category).length,
+      ]),
+    ),
+    { word: 410, excel: 459, powerpoint: 461 },
+  );
 
   assert.match(page, /speechSynthesis/);
   assert.match(page, /localStorage/);
@@ -66,4 +76,8 @@ test("ships categorized Office vocabulary and stable quiz controls", async () =>
   assert.match(page, /clearTimeout\(nextTimerRef\.current\)/);
   assert.match(page, /setTimeout/);
   assert.match(page, /switchCategory/);
+  assert.match(
+    page,
+    /selected !== "common" &&\s*entry\.category === "common"/,
+  );
 });

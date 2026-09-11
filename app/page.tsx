@@ -47,6 +47,14 @@ function parseVocabulary(source: string): WordEntry[] {
     .filter((entry): entry is WordEntry => Boolean(entry));
 }
 
+function belongsToCategory(entry: WordEntry, selected: AppCategory) {
+  return (
+    selected === "all" ||
+    entry.category === selected ||
+    (selected !== "common" && entry.category === "common")
+  );
+}
+
 function optionScore(target: WordEntry, candidate: WordEntry) {
   let score = candidate.category === target.category ? 18 : 0;
   const targetHead = target.meaning.slice(0, 2);
@@ -107,10 +115,7 @@ export default function Home() {
   );
 
   const categoryVocabulary = useMemo(
-    () =>
-      category === "all"
-        ? vocabulary
-        : vocabulary.filter((entry) => entry.category === category),
+    () => vocabulary.filter((entry) => belongsToCategory(entry, category)),
     [category, vocabulary],
   );
 
@@ -123,15 +128,15 @@ export default function Home() {
             .filter(
               (entry): entry is WordEntry =>
                 entry !== undefined &&
-                (category === "all" || entry.category === category),
+                belongsToCategory(entry, category),
             )
         : mode === "mistakes"
           ? mistakeWords
               .map((word) => wordMap.get(word))
               .filter(
-                (entry): entry is WordEntry =>
-                  entry !== undefined &&
-                  (category === "all" || entry.category === category),
+              (entry): entry is WordEntry =>
+                entry !== undefined &&
+                  belongsToCategory(entry, category),
               )
           : categoryVocabulary;
     const basePool = list as WordEntry[];
@@ -260,7 +265,7 @@ export default function Home() {
         : [];
   const visibleActiveList = activeList.filter((word) => {
     const entry = wordMap.get(word);
-    return category === "all" || entry?.category === category;
+    return entry ? belongsToCategory(entry, category) : false;
   });
 
   return (
@@ -349,8 +354,9 @@ export default function Home() {
               const count =
                 item.id === "all"
                   ? vocabulary.length
-                  : vocabulary.filter((entry) => entry.category === item.id)
-                      .length;
+                  : vocabulary.filter((entry) =>
+                      belongsToCategory(entry, item.id),
+                    ).length;
               return (
                 <button
                   key={item.id}
