@@ -30,12 +30,12 @@ test("server-renders the Office vocabulary application shell", async () => {
 
   const html = await response.text();
   assert.match(html, /<html lang="zh-CN">/i);
-  assert.match(html, /<title>Wordmate · Office 英文界面词汇陪练<\/title>/i);
+  assert.match(html, /<title>Wordmate · Office 与四级词汇陪练<\/title>/i);
   assert.match(html, /把英文界面，练成熟悉操作。/);
   assert.match(html, /随机学习/);
   assert.match(html, /复习列表/);
   assert.match(html, /纠错练习/);
-  assert.match(html, /正在装载 Office 界面词库/);
+  assert.match(html, /正在装载/);
   assert.match(html, /PowerPoint/);
 });
 

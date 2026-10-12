@@ -49,6 +49,7 @@ security-reports/
 .vercel
 
 # typescript
+*.tsbuildinfo
 next-env.d.ts
 /dist/
 /.wrangler/
